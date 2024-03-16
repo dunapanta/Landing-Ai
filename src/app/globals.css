@@ -87,19 +87,16 @@
   @apply rotate-[-360deg];
 }
 
-button {
+.button-grad {
   background: black;
   cursor: pointer;
   border: none;
-  padding: 16px 32px;
   color: azure;
-  font-size: 24px;
   font-weight: bold;
   position: relative;
-  border-radius: 12px;
 }
 
-button:hover::before {
+.button-grad::before {
   content: "";
   position: absolute;
   top: 0;

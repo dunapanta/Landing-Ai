@@ -3,16 +3,18 @@ interface Props {
   onClick?: () => void;
   children: React.ReactNode;
   px?: string;
-  white?: boolean;
+  isDark?: boolean;
 }
 
-export const Button = ({ children, className, white, px }: Props) => {
-  const classes = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 ${
+export const Button = ({ children, className, isDark, px }: Props) => {
+  const classes = `button relative inline-flex items-center justify-center h-11 transition-colors ${
     px || "px-7"
-  } ${white ? "text-n-8" : "text-n-1"} ${className}`;
+  } ${isDark ? "text-n-8" : "text-n-1"} ${className}`;
+
+  const spanClasses = "relative z-10";
   return (
-    <button className={`button-grad button-grad-g`}>
-      <span>{children}</span>
+    <button className={`button-grad ${classes}`}>
+      <span className={spanClasses}>{children}</span>
     </button>
   );
 };
