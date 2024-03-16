@@ -75,6 +75,19 @@ const config: Config = {
         "conic-gradient":
           "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
       },
+      keyframes: {
+        glowing: {
+          "0%": {
+            backgroundPosition: "0 0",
+          },
+          "50%": {
+            backgroundPosition: "400% 0",
+          },
+          "100%": {
+            backgroundPosition: "0 0",
+          },
+        },
+      },
     },
   },
   plugins: [
