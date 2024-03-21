@@ -8,6 +8,7 @@ import { HamburgerMenu } from "@/components/design/Header";
 import { Button } from "@/components/ui";
 import { brainwave } from "@/assets";
 import { navigation } from "@/constants";
+import Link from "next/link";
 
 export const Header = () => {
   const [navClick, setNavClick] = useState(false);
@@ -60,7 +61,7 @@ export const Header = () => {
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.id}
                 href={item.url}
                 onClick={handleClick}
@@ -73,7 +74,7 @@ export const Header = () => {
                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
               >
                 {item.title}
-              </a>
+              </Link>
             ))}
           </div>
 
